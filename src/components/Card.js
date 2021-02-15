@@ -12,11 +12,15 @@ const Card = ({ profile }) => {
     const renderCard = result => {
         var listItems = []
         for (let [key, value] of Object.entries(result)) {
-            if(!blackList.includes(key)) {                
+            if(!blackList.includes(key)) {
                 listItems = [
                     ...listItems,
                     (
-                        <ListItem key={key} label={key} value={value} />
+                        <ListItem
+                            key={key}
+                            label={key}
+                            value={value}
+                        />
                     )
                 ]
             }
@@ -29,11 +33,11 @@ const Card = ({ profile }) => {
             <div className="card-body">
                 <h5 className="card-title">
                     <LinkButton href={ profile.website }>
-                        { profile.companyName }                        
+                        { profile.companyName }
                     </LinkButton>
                 </h5>
                 <p className="card-text">
-                    { profile.description }                    
+                    { profile.description }
                 </p>
             </div>
             <ul className="list-group list-group-flush">

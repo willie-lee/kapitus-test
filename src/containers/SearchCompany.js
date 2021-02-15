@@ -15,26 +15,32 @@ const SearchCompany = () => {
 
     return (
         <>
-            <h2 className="mx-auto mt-5">Kapitus Test App</h2>
+            <h2 className="mx-auto mt-5">
+                Kapitus Test App
+            </h2>
             <div className="my-3">
                 <input
                     className="form-control"
                     id="stock-symbol"
                     type="text"
-                    value={searchTerm}
-                    onChange={onSearchChange}
+                    value={ searchTerm }
+                    onChange={ onSearchChange }
                     placeholder="Please type company stock symbol"
                     aria-label="Please type company stock symbol"
                 />
             </div>
             { loading &&
-                <div className="spinner-border text-primary" id="spinner" role="status">
+                <div 
+                    className="spinner-border text-primary" 
+                    id="spinner" 
+                    role="status"
+                >
                     <span className="sr-only">Loading...</span>
                 </div>
             }
             {!loading && response && response[0] &&
                 (
-                    <Card profile={response[0]} />
+                    <Card profile={ response[0] } />
                 )
             }
         </>

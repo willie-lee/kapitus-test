@@ -1,6 +1,6 @@
 import React from "react"
 
-const ListItem = ({label, value}) => {
+const ListItem = ({ label, value }) => {
 
     let backgroundColor
 
@@ -13,13 +13,13 @@ const ListItem = ({label, value}) => {
     }
 
     return (
-        <li className={`list-group-item ${backgroundColor}`}>
+        <li className={ `list-group-item ${backgroundColor}` }>
             <div className="row">
                 <div className="col-3">
-                    {label}
+                    { label }
                 </div>
                 <div className="col-9">
-                    {value}
+                    { value }
                 </div>
             </div>
         </li>
