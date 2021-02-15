@@ -1,6 +1,7 @@
 # Simple React App for Kapitus test
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 Demo App - [https://kapitus-test-willie-lee.netlify.app/](https://kapitus-test-willie-lee.netlify.app/)
 
 ## Available Scripts
