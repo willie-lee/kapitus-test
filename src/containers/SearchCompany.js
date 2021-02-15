@@ -1,13 +1,15 @@
 import React, { useState } from "react"
 import { useFetch } from "react-custom-hook-use-axios"
 import Card from "../components/Card"
+import { useDebounce } from 'use-lodash-debounce'
 
 const SearchCompany = () => {
     const [searchTerm, setSearchTerm] = useState('')
+    const debouncedValue = useDebounce(searchTerm, 800)
 
     const [loading, response, , ] = useFetch({
-        url: `https://financialmodelingprep.com/api/v3/profile/${searchTerm}?apikey=8327ec1c069c0506c3afd50c58922238`
-    }, [searchTerm])
+        url: `https://financialmodelingprep.com/api/v3/profile/${debouncedValue}?apikey=8327ec1c069c0506c3afd50c58922238`
+    }, [debouncedValue])    
 
     const onSearchChange = event => {
         setSearchTerm(event.target.value)
